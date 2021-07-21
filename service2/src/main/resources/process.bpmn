@@ -19,15 +19,15 @@
         <bpmn:timeDuration xsi:type="bpmn:tFormalExpression">PT2M</bpmn:timeDuration>
       </bpmn:timerEventDefinition>
     </bpmn:boundaryEvent>
-    <bpmn:task id="Activity_14vclvm" name="Service2 Task">
-      <bpmn:incoming>Flow_1vv4bhu</bpmn:incoming>
-      <bpmn:outgoing>Flow_04lj7b8</bpmn:outgoing>
-    </bpmn:task>
     <bpmn:sequenceFlow id="Flow_1vv4bhu" sourceRef="Event_189xjk3" targetRef="Activity_14vclvm" />
     <bpmn:endEvent id="Event_1wayphw">
       <bpmn:incoming>Flow_04lj7b8</bpmn:incoming>
     </bpmn:endEvent>
     <bpmn:sequenceFlow id="Flow_04lj7b8" sourceRef="Activity_14vclvm" targetRef="Event_1wayphw" />
+    <bpmn:serviceTask id="Activity_14vclvm" name="Service2 Task" camunda:expression="${service2Service.logMessage()}">
+      <bpmn:incoming>Flow_1vv4bhu</bpmn:incoming>
+      <bpmn:outgoing>Flow_04lj7b8</bpmn:outgoing>
+    </bpmn:serviceTask>
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="service2-process">
@@ -57,11 +57,11 @@
       <bpmndi:BPMNShape id="UserTask_08mft2c_di" bpmnElement="say-hello">
         <dc:Bounds x="270" y="77" width="100" height="80" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_14vclvm_di" bpmnElement="Activity_14vclvm">
-        <dc:Bounds x="390" y="200" width="100" height="80" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_1wayphw_di" bpmnElement="Event_1wayphw">
         <dc:Bounds x="532" y="222" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1g9iqip_di" bpmnElement="Activity_14vclvm">
+        <dc:Bounds x="390" y="200" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_1w47euj_di" bpmnElement="Event_189xjk3">
         <dc:Bounds x="302" y="139" width="36" height="36" />
