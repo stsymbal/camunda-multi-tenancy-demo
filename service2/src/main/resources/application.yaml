@@ -1,5 +1,5 @@
 # spring.datasource.url: jdbc:h2:file:./camunda-h2-database
-spring.datasource.url: jdbc:h2:tcp://localhost:9092/file:./target/camunda-h2-database
+spring.datasource.url: jdbc:h2:tcp://localhost:9092/file:./target/camunda-h2-database;INIT=CREATE SCHEMA IF NOT EXISTS service2\;SET SCHEMA service2\;
 server:
   port: 8082
   servlet:
@@ -9,6 +9,9 @@ server:
 
 camunda:
   bpm:
+    database:
+      schema-name: service2
+      table-prefix: service2.
     job-execution:
       deployment-aware: true
     process-engine-name: Service2
