@@ -1,0 +1,23 @@
+# spring.datasource.url: jdbc:h2:file:./camunda-h2-database
+spring.datasource.url: jdbc:h2:tcp://localhost:9092/file:./target/camunda-h2-database;INIT=CREATE SCHEMA IF NOT EXISTS sharedui\;SET SCHEMA sharedui\;
+server:
+  port: 8083
+  servlet:
+    session:
+      cookie:
+        name: JSESSIONID3
+
+camunda:
+  bpm:
+    enabled: true
+    database:
+      schema-update: true
+      schema-name: sharedui
+      table-prefix: sharedui.
+    job-execution:
+      enabled: false
+    process-engine-name: SharedUI
+    auto-deployment-enabled: false
+    admin-user:
+      id: admin
+      password: admin

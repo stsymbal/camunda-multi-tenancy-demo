@@ -1,0 +1,29 @@
+<process-application
+  xmlns="http://www.camunda.org/schema/1.0/ProcessApplication"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <process-engine name="service1">
+    <configuration>com.bp3.consulting.workflow.Service1ProcessEngineConfiguration</configuration>
+
+    <properties>
+     <property name="history">full</property>
+      <property name="jobExecutorActivate">false</property>
+      <property name="databaseSchemaUpdate">false</property>
+      <property name="authorizationEnabled">true</property>
+      <property name="databaseTablePrefix">SERVICE1.</property>
+    </properties>
+  </process-engine>
+
+  <process-engine name="service2">
+    <configuration>com.bp3.consulting.workflow.Service2ProcessEngineConfiguration</configuration>
+
+    <properties>
+      <property name="history">full</property>
+      <property name="jobExecutorActivate">false</property>
+      <property name="databaseSchemaUpdate">false</property>
+      <property name="authorizationEnabled">true</property>
+      <property name="databaseTablePrefix">SERVICE2.</property>
+    </properties>
+  </process-engine>
+
+</process-application>
