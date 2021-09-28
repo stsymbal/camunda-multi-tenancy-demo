@@ -2,7 +2,7 @@
   xmlns="http://www.camunda.org/schema/1.0/ProcessApplication"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
-  <process-engine name="service1">
+  <process-engine name="Service1">
     <configuration>com.bp3.consulting.workflow.Service1ProcessEngineConfiguration</configuration>
 
     <properties>
@@ -14,7 +14,7 @@
     </properties>
   </process-engine>
 
-  <process-engine name="service2">
+  <process-engine name="Service2">
     <configuration>com.bp3.consulting.workflow.Service2ProcessEngineConfiguration</configuration>
 
     <properties>
