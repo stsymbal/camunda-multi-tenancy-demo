@@ -3,7 +3,7 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
   <process-engine name="Service1">
-    <configuration>com.bp3.consulting.workflow.Service1ProcessEngineConfiguration</configuration>
+    <configuration>com.bp3.consulting.workflow.TenantServiceProcessEngineConfiguration</configuration>
 
     <properties>
      <property name="history">full</property>
@@ -15,7 +15,7 @@
   </process-engine>
 
   <process-engine name="Service2">
-    <configuration>com.bp3.consulting.workflow.Service2ProcessEngineConfiguration</configuration>
+    <configuration>com.bp3.consulting.workflow.TenantServiceProcessEngineConfiguration</configuration>
 
     <properties>
       <property name="history">full</property>
