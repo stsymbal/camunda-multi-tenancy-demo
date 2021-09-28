@@ -21,5 +21,6 @@ Dedicated schema-per-service with SharedUI (Cockpit, Tasklist, Admin) Camunda Pl
 1. Start process instances for SharedUI Tasklist
    http://localhost:8083/camunda/app/tasklist/service1/
    http://localhost:8083/camunda/app/tasklist/service2/
+1. The engines can be accessed via `BpmPlatform.getProcessEngineService()`, see [CustomApplicationListener class](shared-ui/src/main/java/com/bp3/consulting/workflow/CustomApplicationListener.java)
 
 H2 Console is accessible via http://localhost:8080/h2-console as `jdbc:h2:tcp://localhost:9092/file:./target/camunda-h2-database`
